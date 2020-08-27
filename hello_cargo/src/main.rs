@@ -3,8 +3,8 @@ fn main() {
     let mut wurst = 1;
 
    let test = {
-wurst = wurst +1;
-wurst
+    wurst = wurst +1;
+    wurst
    };
 
    add(5, 9);
