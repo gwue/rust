@@ -1,0 +1,9 @@
+[package]
+edition = "2018"
+name = "nth_prime"
+version = "2.1.0"
+
+[dependencies]
+
+[profile.test]
+opt-level = 3
