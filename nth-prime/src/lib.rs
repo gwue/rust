@@ -78,7 +78,7 @@ fn sieve_up_to(n: u64, sieve: &mut Vec<u64>) -> Vec<u64> {
         }
     }
 
-    let primes: Vec<u64> = sieve.iter().filter(|&&x| x != 0).map(|x| *x).collect();
+    let primes: Vec<u64> = sieve.iter().filter(|&&x| x != 0).copied().collect();
 
     primes
 }
