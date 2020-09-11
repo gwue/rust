@@ -58,11 +58,10 @@ fn test_a_lot_of_names_are_different() {
         robots.push(robot::Robot::new());
     }
     for i in 0..999 {
-        println!("Test: {}",i);
-        for j in i+1..999 {
+        println!("Test: {}", i);
+        for j in i + 1..999 {
             assert_ne!(robots[i].name(), robots[j].name());
         }
-
     }
 }
 

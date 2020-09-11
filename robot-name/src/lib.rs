@@ -24,7 +24,7 @@ impl Robot {
     }
 
     pub fn name(&self) -> &str {
-        println!("Name is {}", self.name);
+        //println!("Name is {}", self.name);
         &self.name
     }
 
@@ -33,6 +33,7 @@ impl Robot {
             let mut active_names = ROBOT_NAMES.lock().unwrap();
             active_names.remove(&self.name);
         }
+
         loop {
             let mut robot_name = String::new();
             robot_name.push(thread_rng().gen_range(b'A', b'Z') as char);
