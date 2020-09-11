@@ -24,7 +24,6 @@ impl Robot {
     }
 
     pub fn name(&self) -> &str {
-        //println!("Name is {}", self.name);
         &self.name
     }
 
