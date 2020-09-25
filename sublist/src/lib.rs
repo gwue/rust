@@ -1,3 +1,5 @@
+mod matcher;
+
 #[derive(Debug, PartialEq)]
 pub enum Comparison {
     Equal,
@@ -7,5 +9,6 @@ pub enum Comparison {
 }
 
 pub fn sublist<T: PartialEq>(_first_list: &[T], _second_list: &[T]) -> Comparison {
-    unimplemented!("Determine if the first list is equal to, sublist of, superlist of or unequal to the second list.");
+    let m = matcher::Matcher {};
+    Comparison::Unequal
 }
