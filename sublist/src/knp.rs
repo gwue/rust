@@ -1,3 +1,5 @@
+/** Knuth-Morris-Pratt Algorithm */
+
 pub struct KNP<'a, T: PartialEq> {
     pattern: &'a [T],
     prefixes: Vec<i32>,
@@ -9,7 +11,7 @@ impl<T: PartialEq> KNP<'_, T> {
 
         let mut i = 0; // Current position
         let mut j = -1; // Length of already found prefix
-        
+
         prefixes[i] = j;
         while i < pattern.len() {
             while j >= 0 && pattern[j as usize] != pattern[i] {
